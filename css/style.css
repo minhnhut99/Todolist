@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white-color: #ffffff;
+  --blue-color: #0C56D0;
+  --green-color:#00B74A;
+  --yellow-color: #FFA900;
+  --red-color:#F93154;
+  --border-color:#dad3d3;
+  --black-color: #413e3e;
+}
+
+body {
+  font-family: 'Titillium Web', sans-serif;
+}
+
+h1 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.btn {
+  color: var(--white-color);
+  text-transform: uppercase;
+  font-weight: normal;
+  padding: 8px 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  transition: ease-in-out 0.2s;
+}
+
+.btn:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2); 
+}
+
+.btn-go {
+  background-color: white;
+  border: 2px solid #17aadb;
+  color: #17aadb;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  margin-left: -10px;
+}
+
+.btn-save {
+  background-color: var(--blue-color);
+  margin-top: 12px;
+}
+
+.btn-sort {
+  background-color: var(--blue-color);
+  margin-right: 20px;
+}
+
+.btn-edit {
+  background-color: var(--yellow-color);
+}
+
+.btn-delete {
+  background-color: var(--red-color);
+}
+
+input {
+  outline: none;
+}
+
+.header {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.header #search {
+  padding: 8px 150px 8px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+}
+
+.header-sort {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.sort-list {
+  position: absolute;
+  display: none;
+  top: 35px;
+  left: 0;
+  background-color: var(--white-color);
+  border-radius: 4px;
+  list-style-type: none;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.sort-list-show {
+  display: block;
+}
+
+.sort-link {
+  text-decoration: none;
+  color: var(--black-color);
+  display: block;
+  padding: 8px 50px 8px 8px;
+  transition: ease-in 0.11s;
+}
+
+.sort-link:hover {
+  background-color: #f1f1f1;
+}
+
+.sort-name {
+  background-color: var(--green-color);
+  padding: 5px 20px;
+  border-radius: 4px;
+  color: var(--white-color);
+  font-weight: 600;
+}
+
+.header-add {
+  width: 40%;
+}
+
+.btn-add {
+  width: 100%;
+  background-color:#16B5EA;
+  padding: 10px 0;
+  margin-bottom: 15px;
+}
+
+.add-group {
+  display: none;
+}
+
+.group-btn {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  float: right;  
+}
+
+.add-group #task {
+  padding: 8px 20px 8px 4px;
+  border-radius: 4px;
+  border: 1px solid #b4b1b1;
+  outline: none;
+} 
+
+.add-group #level {
+  padding: 8px 3px;
+  outline: none;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+}
+
+.btn-submit {
+  background-color: var(--blue-color);
+}
+
+.btn-cancel {
+  background-color: var(--red-color);
+  margin-left: 5px;
+}
+
+.task {
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 4px;
+  padding-bottom: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.task-head {
+  margin-bottom: 30px;
+  text-transform: capitalize;
+  padding: 10px 20px;
+  color: var(--white-color);
+  background-color: var(--green-color);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.task-text {
+  width: 800px;
+  word-wrap: wrap;
+}
+
+.task-level {
+  font-size: 12px;
+  text-transform: capitalize;
+  background-color: var(--red-color);
+  color: var(--white-color);
+  font-weight: bold;  
+  padding: 3px 7px;
+  border-radius: 4px;
+}
+
+.task-high-level {
+  background-color: var(--red-color);
+}
+
+.task-small-level {
+  background-color: black;
+}
+
+.task-medium-level {
+  background-color: #17aadb;;
+}
+
+table {
+  border-collapse: collapse;
+  padding-left: 30px;
+  display: block;
+  padding-bottom: 30px;
+} 
+
+table tbody tr {
+  border-bottom: 1px solid var(--border-color);
+}
+
+thead th {
+  text-transform: capitalize;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+th {
+  margin-left: 20px;
+}
+
+td {
+  margin-left: 40px;
+  padding: 10px 20px;
+}

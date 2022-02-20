@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <h1>project - Todo list</h1>
+  <header class="header">
+    <div class="header-search">
+      <input type="text" id="search" placeholder="Enter keyword..."  autocomplete="off">
+      <button class="btn btn-go">go!</button>
+    </div>
+    <div class="header-sort">
+      <button class="btn btn-sort">
+        sort by
+        <i class="fas fa-caret-down"></i>
+      </button>
+      <ul class="sort-list">
+        <li class="sort-item">
+          <a href="#" class="sort-link" id="name-asc">Name-ASC</a>
+        </li>
+        <li class="sort-item">
+          <a href="#" class="sort-link" id="name-desc">Name-DESC</a>
+        </li>
+        <li class="sort-item">
+          <a href="#" class="sort-link" id="level-asc">Level-ASC</a>
+        </li>
+        <li class="sort-item">
+          <a href="#" class="sort-link" id="level-desc">Level-DESC</a>
+        </li>
+      </ul>
+      <span class="sort-name">NAME-ASC</span>
+    </div>
+    <div class="header-add">
+      <button class="btn btn-add">add task</button>
+      <div class="add-group">
+        <input type="text" placeholder="Task name..." id="task">
+        <input type="hidden" id="saveIndex">
+        <select name="level" id="level">
+          <option value="0">Small</option>
+          <option value="1">Medium</option>
+          <option value="2">High</option>
+        </select>
+        <div class="group-btn">
+          <button class="btn btn-submit">submit</button>
+          <button  class="btn btn-save"  style="display: none;">save task</button>
+          <button class="btn btn-cancel">cancel</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="task">
+    <div class="task-head">List task</div>
+    <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>task</th>
+            <th>Level</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody  id="task-area">
+          <!-- <tr class="task-row">
+            <td>1</td>
+            <td class="task-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium aliquam beatae eius tempora, sit doloribus et </td>
+            <td>
+              <span class="task-level task-high-level">High</span>
+            </td>
+            <td>
+              <button class="btn btn-edit">edit</button>
+              <button class="btn btn-delete">delete</button>
+            </td>
+          </tr>
+          <tr class="task-row">
+            <td>2</td>
+            <td class="task-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium aliquam beatae eius tempora, sit doloribus et </td>
+            <td>
+              <span class="task-level task-small-level">Small</span>
+            </td>
+            <td>
+              <button class="btn btn-edit">edit</button>
+              <button class="btn btn-delete">delete</button>
+            </td>
+          </tr>
+          <tr class="task-row">
+            <td>3</td>
+            <td class="task-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium aliquam beatae eius tempora, sit doloribus et </td>
+            <td>
+              <span class="task-level task-medium-level">medium</span>
+            </td>
+            <td>
+              <button class="btn btn-edit">edit</button>
+              <button class="btn btn-delete">delete</button>
+            </td>
+          </tr> -->
+        </tbody>
+    </table>
+  </div>
+  <script type="text/javascript" src="./js/main.js"></script>
+</body>
+</html>
